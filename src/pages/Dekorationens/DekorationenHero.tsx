@@ -18,6 +18,15 @@ export const settings: Settings = {
 };
 
 const DekorationenHero: FC<IDekorationenHeroProps> = () => {
+  const slides = [
+    {
+      image: 'images/decorationen/slider/slider_image.png',
+    },
+    {
+      image: 'images/decorationen/slider/slider_image.png',
+    },
+  ];
+
   return (
     <Stack pos="relative">
       <VStack
@@ -47,22 +56,17 @@ const DekorationenHero: FC<IDekorationenHeroProps> = () => {
         <Box pos="absolute" bottom="0" w="full">
           <Container maxW={CONTAINER_MAX_WIDTH} mb={{ base: '0', md: '16' }}>
             <Slider {...settings} className="big_slider">
-              <Box pb="8">
-                <Box
-                  borderRadius={{ base: '8', md: '16', lg: '24' }}
-                  overflow="hidden"
-                  boxShadow="dark">
-                  <Image w="100%" src="images/decorationen/slider/slider_image.png" />
+              {slides.map((slide, index) => (
+                <Box key={index}>
+                  <Box
+                    m={{ base: 2, md: 4 }}
+                    borderRadius={{ base: '8', md: '16', lg: '24' }}
+                    overflow="hidden"
+                    boxShadow={{ base: 'light', md: 'dark' }}>
+                    <Image w="100%" src={slide.image} />
+                  </Box>
                 </Box>
-              </Box>
-              <Box pb="8">
-                <Box
-                  borderRadius={{ base: '8', md: '16', lg: '24' }}
-                  overflow="hidden"
-                  boxShadow="dark">
-                  <Image w="100%" src="images/decorationen/slider/slider_image.png" />
-                </Box>
-              </Box>
+              ))}
             </Slider>
           </Container>
         </Box>

@@ -17,17 +17,15 @@ import { INewsSlides } from 'types/commonTypes';
 
 interface IWhiteMobileSliderProps {
   slides: INewsSlides[];
-  showTitle?: boolean;
   withoutImageVariant?: boolean;
 }
 
 const WhiteMobileSlider: FC<IWhiteMobileSliderProps> = ({
   withoutImageVariant = false,
   slides,
-  showTitle = false,
 }) => {
   return (
-    <Container maxW={CONTAINER_MAX_WIDTH} display={{ base: 'block', md: 'none' }}>
+    <Container maxW={CONTAINER_MAX_WIDTH}>
       <Slider {...settings} className="white_slider">
         {slides.map((slide, i) => (
           <Box key={i}>
@@ -74,11 +72,6 @@ const WhiteMobileSlider: FC<IWhiteMobileSliderProps> = ({
               </Stack>
             ) : (
               <>
-                {showTitle && (
-                  <Text variant="cursive" fontSize="xl">
-                    News
-                  </Text>
-                )}
                 <Stack
                   mx="2"
                   mb="4"

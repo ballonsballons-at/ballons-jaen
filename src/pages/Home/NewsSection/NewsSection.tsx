@@ -8,7 +8,7 @@ interface INewsSectionProps {}
 const NewsSection: FC<INewsSectionProps> = () => {
   return (
     <Container
-      h={{ base: 'auto', lg: '50rem' }}
+      h={{ base: 'auto', lg: '44rem' }}
       alignItems={{ base: 'center', lg: 'start' }}
       justifyContent="space-between"
       flexDirection={{ base: 'column-reverse', md: 'column', lg: 'row' }}

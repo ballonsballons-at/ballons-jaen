@@ -42,7 +42,7 @@ const theme = extendTheme(
 
     fontSizes: {
       xs: '0.75rem', // 12px
-      sm: '0.938rem', // 15px
+      sm: '.9375rem', // 15px
       md: '1.25rem', // 20px
       lg: '1.5rem', // 24px
       xl: '1.875rem', // 30px
@@ -110,18 +110,18 @@ const theme = extendTheme(
           },
           sm: {
             fontSize: 'sm',
-            px: 5,
-            py: 5,
+            px: '1.25rem',
+            py: '.625rem',
           },
           md: {
             fontSize: 'md',
-            px: 8,
-            py: 6,
+            px: '1.875rem',
+            py: '.9375rem',
           },
           lg: {
             fontSize: '1.375rem',
-            px: 8,
-            py: 4,
+            px: '1.875rem',
+            py: '.9375rem',
           },
         },
         // Two variants: outline and solid
@@ -197,13 +197,13 @@ const theme = extendTheme(
             fontSize: { base: 'xl', lg: '3xl', xl: '4xl' },
           },
           80: {
-            fontSize: { base: 'xl', md: '2xl', lg: '4xl', xl: '5xl', '2xl': '6xl' },
+            fontSize: { base: 'xl', md: '2xl', lg: '5xl', xl: '6xl' },
           },
           100: {
-            fontSize: { base: 'xl', md: '3xl', lg: '7xl', '2xl': '8xl' },
+            fontSize: { base: 'xl', md: '3xl', lg: '7xl', xl: '8xl' },
           },
           120: {
-            fontSize: { base: 'xl', md: '4xl', lg: '8xl', '2xl': '10xl' },
+            fontSize: { base: 'xl', md: '4xl', lg: '8xl', xl: '10xl' },
             lineHeight: { md: '5rem' },
           },
         },
