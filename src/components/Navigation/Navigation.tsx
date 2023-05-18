@@ -1,4 +1,4 @@
-import {Box, Stack} from '@chakra-ui/react'
+import {Box, Stack, Text} from '@chakra-ui/react'
 import {FC} from 'react'
 
 import BottomNav from './BottomNav'
@@ -8,6 +8,7 @@ import TopNav from './TopNav'
 import {useBasket} from '../../services/basket'
 import {useSearch} from '../../services/search'
 import {LayoutMode} from '../../types/commonTypes'
+import Simple from './TestNavbar'
 
 interface INavigationProps {
   mode: LayoutMode
@@ -26,13 +27,25 @@ const Navigation: FC<INavigationProps> = ({mode}) => {
   }
 
   return (
-    <Box
-      as="nav"
-      zIndex="sticky"
-      pos={mode === 'website' ? 'sticky' : 'relative'}
-      top="0"
-      bg="white">
-      <Stack display={{base: 'none', lg: 'flex'}} spacing="0">
+    <>
+      {mode === 'website' && (
+        <Box bg="black.500" color="white" justifyContent={'center'}>
+          <Text textAlign="center" fontSize="sm">
+            Inspiriert von der Leichtigkeit eines Ballons, streben wir nach
+            unendlichen Möglichkeiten.
+          </Text>
+        </Box>
+      )}
+      <Box
+        as="nav"
+        zIndex="sticky"
+        pos={mode === 'website' ? 'sticky' : 'relative'}
+        top="0"
+        bg="white">
+        <Box>
+          <Simple />
+        </Box>
+        {/* <Stack display={{base: 'none', lg: 'flex'}} spacing="0">
         <TopNav
           mode={mode}
           onSearchClick={handleOnSearchClick}
@@ -46,8 +59,9 @@ const Navigation: FC<INavigationProps> = ({mode}) => {
           onSearchClick={handleOnSearchClick}
           onBasketClick={handleOnBasketClick}
         />
+      </Box> */}
       </Box>
-    </Box>
+    </>
   )
 }
 export default Navigation

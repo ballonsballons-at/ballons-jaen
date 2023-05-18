@@ -7,7 +7,10 @@ import {
   Heading,
   HStack,
   Text,
-  Image
+  Image,
+  Divider,
+  Flex,
+  VStack
 } from '@chakra-ui/react'
 
 import {useScrollSync} from '../../hooks/scroll'
@@ -28,41 +31,6 @@ export interface ParallaxHeroProps {
 export const ParallaxHero = ({noScroll}: ParallaxHeroProps) => {
   const {ref, scrollTop} = useScrollSync()
   const contentPagesIndex = useContentPages()
-
-  const switchingHeadline = (
-    <HStack mb="10" display="flex" justifyContent="center">
-      <TextLoop>
-        {[
-          'Beeindrucke mit',
-          'Verführe mit',
-          'Überrasche mit',
-          'Verzaubere mit',
-          'Verwöhne mit',
-          "Verlieb' dich mit",
-          "Verlob' dich mit",
-          'Heirate mit',
-          'Feier mit'
-        ].map((text, index) => {
-          return (
-            <Heading
-              key={index}
-              fontSize={{base: '2xl', md: '4xl', lg: '6xl'}}
-              mb="8 !important"
-              fontWeight="semibold"
-              textAlign="center">
-              <Field.Text
-                key={index}
-                name={`heroHeading-${index}`}
-                label={`Heading ${index}`}
-                defaultValue={`<p>${text}</p>`}
-                rtf
-              />
-            </Heading>
-          )
-        })}
-      </TextLoop>
-    </HStack>
-  )
 
   const cards = [
     {
@@ -248,13 +216,53 @@ export const ParallaxHero = ({noScroll}: ParallaxHeroProps) => {
           justifyContent="center"
           alignContent="center"
           height={{md: 'calc(100vh - 7.5rem)', lg: 'calc(100vh - 8rem)'}}
-          display={{base: 'none', md: 'flex'}}>
-          {switchingHeadline}
+          display={{base: 'none', md: 'flex'}}
+          spacing="14">
+          <VStack alignItems="center" spacing="8">
+            <TextLoop>
+              {[
+                "Beeindruck'",
+                "Verführ'",
+                "Überrasch'",
+                "Verzauber'",
+                "Verwöhn'",
+                "Verlieb' dich",
+                "Verlob' dich",
+                "Heirat'",
+                "Feier'"
+              ].map((text, index) => {
+                return (
+                  <Heading
+                    key={index}
+                    fontSize={{base: '2xl', md: '4xl', lg: '6xl'}}
+                    fontWeight="semibold"
+                    textAlign="center">
+                    <Field.Text
+                      key={index}
+                      name={`heroHeading-${index}`}
+                      label={`Heading ${index}`}
+                      defaultValue={`<p>${text}</p>`}
+                      rtf
+                    />
+                  </Heading>
+                )
+              })}
+            </TextLoop>
+
+            <Flex align="center" my={2}>
+              <Divider borderColor="gray.400" flex={1} orientation="vertical" />
+              <Text mx={2} color="gray.600" fontWeight="bold">
+                mit
+              </Text>
+              <Divider borderColor="gray.400" flex={1} orientation="vertical" />
+            </Flex>
+          </VStack>
+
           <Heading
             fontSize={{base: '2xl', md: '8xl', lg: '9xl'}}
             fontWeight="semibold"
             textAlign="center">
-            <Box as="span" mt="10">
+            <Box as="span">
               <Field.Text
                 name="heroHeadingBallons"
                 label="Heading"
@@ -263,12 +271,13 @@ export const ParallaxHero = ({noScroll}: ParallaxHeroProps) => {
               />
             </Box>
           </Heading>
+
           <HStack
             mt="-5"
             justify="center"
             h={'calc(50vh - 15rem)'}
             align="flex-start"
-            gap="4">
+            gap="0">
             <LinkButtonField
               name="littleThingsButton1"
               defaultValue="Zum Shop"

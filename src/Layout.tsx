@@ -1,3 +1,4 @@
+import {Box, Text} from '@chakra-ui/react'
 import {SearchProvider} from '@snek-at/gatsby-theme-shopify'
 import React from 'react'
 
