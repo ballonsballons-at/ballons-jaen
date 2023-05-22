@@ -162,20 +162,16 @@ export const ParallaxHero = ({noScroll}: ParallaxHeroProps) => {
           display={{base: 'flex', md: 'none'}}>
           <HStack>
             <HBallon className="background-Ballon" />
-            <Heading
+
+            <Field.RichText
+              as={Heading}
+              name="heroTextBallons"
+              defaultValue="<i>Ballons</i>"
               fontSize={{base: '2xl', md: '8xl', lg: '9xl'}}
               fontWeight="semibold"
               textAlign="center"
-              pt="12">
-              <Box as="span">
-                <Field.Text
-                  name="heroHeadingBallons"
-                  label="Heading"
-                  defaultValue="<p><b><i>Ballons</i></b></p>"
-                  rtf
-                />
-              </Box>
-            </Heading>
+              pt="12"
+            />
           </HStack>
           <Stack alignItems={'center'}>
             <LinkButtonField
@@ -258,19 +254,14 @@ export const ParallaxHero = ({noScroll}: ParallaxHeroProps) => {
             </Flex>
           </VStack>
 
-          <Heading
+          <Field.RichText
+            as={Heading}
+            name="heroTextBallons"
+            defaultValue="<i>Ballons</i>"
             fontSize={{base: '2xl', md: '8xl', lg: '9xl'}}
             fontWeight="semibold"
-            textAlign="center">
-            <Box as="span">
-              <Field.Text
-                name="heroHeadingBallons"
-                label="Heading"
-                defaultValue="<p><b><i>Ballons</i></b></p>"
-                rtf
-              />
-            </Box>
-          </Heading>
+            textAlign="center"
+          />
 
           <HStack
             mt="-5"

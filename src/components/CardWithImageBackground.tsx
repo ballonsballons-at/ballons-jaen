@@ -29,32 +29,30 @@ const CardWithImageBackground: FC<ICardWithImageBackgroundProps> = ({
   h,
   isSmallText = false
 }) => {
-
   const {isEditing} = useStatus()
 
-  console.log('card', "card rerendered")
+  console.log('card', 'card rerendered')
 
   return (
     <Stack
       onClick={() => !isEditing && card.linkUrl && navigate(card.linkUrl)}
       position="relative"
       _hover={{
-        transition: "all 0.3s ease",
+        transition: 'all 0.3s ease',
         transform: {
-          md: "scale(1.03) ",
-          lg: "scale(1.03) ",
-        },
+          md: 'scale(1.03) ',
+          lg: 'scale(1.03) '
+        }
       }}
       transition="ease-in 0.2s"
       boxShadow="darker"
       color="white"
       justify="end"
-      h={h ?? "full"}
+      h={h ?? 'full'}
       w={w ?? {}}
       borderRadius="xl"
-      overflow={"hidden"}
-      minW={minW || "20rem"}
-    >
+      overflow={'hidden'}
+      minW={minW || '20rem'}>
       {card.imageFieldName && (
         <Field.Image
           name={card.imageFieldName}
@@ -66,13 +64,14 @@ const CardWithImageBackground: FC<ICardWithImageBackgroundProps> = ({
         {displayContent && (
           <Stack p="6" pb="4">
             {card.headingFieldName && (
-              <Heading fontSize={{base: 'lg', xl: 'xl'}} fontWeight="700">
-                <Field.Text
-                  name={card.headingFieldName}
-                  label="Heading"
-                  defaultValue={card.headingDefaultValue ?? ''}
-                />
-              </Heading>
+              <Field.Text
+                as={Heading}
+                asAs="h2"
+                fontSize={{base: 'lg', xl: 'xl'}}
+                fontWeight="700"
+                name={card.headingFieldName}
+                defaultValue={card.headingDefaultValue ?? ''}
+              />
             )}
 
             {card.textFieldName && (
