@@ -22,7 +22,8 @@ import { Controller, useForm } from 'react-hook-form'
 import { CheckboxStyled } from '../../CheckboxStyled'
 
 export interface ContactFormValues {
-  name: string
+  firstName: string
+  lastName: string
   email: string
   message: string
 
@@ -36,7 +37,8 @@ export interface ContactModalProps {
   onSubmit: (data: ContactFormValues) => Promise<void>
 
   fixedValues?: {
-    name?: string
+    firstName?: string
+    lastName?: string
     email?: string
   }
 
@@ -103,43 +105,59 @@ export const ContactModal: React.FC<ContactModalProps> = ({
               </Text>
 
               <HStack>
-                <FormControl isInvalid={!!errors.name}>
-                  <FormLabel htmlFor="name" fontSize="sm">
-                    Name
+                <FormControl isInvalid={!!errors.firstName}>
+                  <FormLabel htmlFor="firstName" fontSize="sm">
+                    Vorname
                   </FormLabel>
                   <Input
-                    id="name"
-                    placeholder="Max Mustermann"
-                    {...register('name', {
+                    id="firstName"
+                    placeholder="Max"
+                    {...register('firstName', {
                       required: true
                     })}
-                    isDisabled={!!fixedValues?.name}
+                    isDisabled={!!fixedValues?.firstName}
                   />
 
                   <FormErrorMessage fontSize="sm">
-                    {errors.name?.message}
+                    {errors.firstName?.message}
                   </FormErrorMessage>
                 </FormControl>
-                <FormControl isInvalid={!!errors.email}>
-                  <FormLabel htmlFor="email" fontSize="sm">
-                    E-Mail
+                <FormControl isInvalid={!!errors.lastName}>
+                  <FormLabel htmlFor="lastName" fontSize="sm">
+                    Nachname
                   </FormLabel>
                   <Input
-                    id="email"
-                    placeholder="max.mustermann@example.com"
-                    type="email"
-                    {...register('email', {
+                    id="lastName"
+                    placeholder="Mustermann"
+                    {...register('lastName', {
                       required: true
                     })}
-                    isDisabled={!!fixedValues?.email}
+                    isDisabled={!!fixedValues?.lastName}
                   />
 
                   <FormErrorMessage fontSize="sm">
-                    {errors.email?.message}
+                    {errors.lastName?.message}
                   </FormErrorMessage>
                 </FormControl>
               </HStack>
+              <FormControl isInvalid={!!errors.email}>
+                <FormLabel htmlFor="email" fontSize="sm">
+                  E-Mail
+                </FormLabel>
+                <Input
+                  id="email"
+                  placeholder="max.mustermann@example.com"
+                  type="email"
+                  {...register('email', {
+                    required: true
+                  })}
+                  isDisabled={!!fixedValues?.email}
+                />
 
+                <FormErrorMessage fontSize="sm">
+                  {errors.email?.message}
+                </FormErrorMessage>
+              </FormControl>
               <FormControl isInvalid={!!errors.message}>
                 <FormLabel htmlFor="message" fontSize="sm">
                   Wie können wir Ihnen helfen?
