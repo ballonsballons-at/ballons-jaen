@@ -25,6 +25,7 @@ export interface ContactFormValues {
   firstName: string
   lastName: string
   email: string
+  phone: string
   message: string
 
   agreeToTerms: boolean
@@ -40,6 +41,7 @@ export interface ContactModalProps {
     firstName?: string
     lastName?: string
     email?: string
+    phone?: string
   }
 
   defaultValues?: {
@@ -140,6 +142,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                   </FormErrorMessage>
                 </FormControl>
               </HStack>
+              <HStack>
               <FormControl isInvalid={!!errors.email}>
                 <FormLabel htmlFor="email" fontSize="sm">
                   E-Mail
@@ -158,6 +161,25 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                   {errors.email?.message}
                 </FormErrorMessage>
               </FormControl>
+              <FormControl isInvalid={!!errors.email}>
+                <FormLabel htmlFor="phone" fontSize="sm">
+                  Telefonnummer
+                </FormLabel>
+                <Input
+                  id="phone"
+                  placeholder="+43 123 456 789"
+                  type="phone"
+                  {...register('phone', {
+                    required: true
+                  })}
+                  isDisabled={!!fixedValues?.phone}
+                />
+
+                <FormErrorMessage fontSize="sm">
+                  {errors.email?.message}
+                </FormErrorMessage>
+              </FormControl>
+              </HStack>
               <FormControl isInvalid={!!errors.message}>
                 <FormLabel htmlFor="message" fontSize="sm">
                   Wie können wir Ihnen helfen?
