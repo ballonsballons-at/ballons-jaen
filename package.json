@@ -54,6 +54,7 @@
   "resolutions": {
     "gatsby-plugin-image": "^3",
     "graphql": "^16",
-    "@gatsbyjs/reach-router": "^2.0.0"
+    "@gatsbyjs/reach-router": "^2.0.0",
+    "gatsby-source-shopify": "^9.0.0"
   }
 }
