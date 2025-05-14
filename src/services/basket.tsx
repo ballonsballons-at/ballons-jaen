@@ -227,7 +227,7 @@ export const BasketDrawerProvider = withStoreContext<BasketDrawerProps>(
 
       const order = await createOrFetchCheckout()
 
-      const res = await sendTemplateMail('741b9cab-4835-4f1d-8ba4-927ebb80111f', {
+      const res = await sendTemplateMail('95b97961-a809-489a-86bc-cd137bf3e681', {
         envelope: {
           replyTo: data.email
         },

@@ -81,7 +81,7 @@ export const ContactModalProvider: React.FC<ContactModalDrawerProps> = ({
 
     console.log(data, meta)
 
-    const res = await sendTemplateMail('48f87e63-2202-4640-9bfc-55bf6d478f7c', {
+    const res = await sendTemplateMail('d5b6982f-c6c9-465c-ad7c-ddb20e3635a4', {
      envelope: {
         replyTo: data.email
      },
@@ -96,7 +96,6 @@ export const ContactModalProvider: React.FC<ContactModalDrawerProps> = ({
     
 
     })
-
   
 
     if (!res.ok) {

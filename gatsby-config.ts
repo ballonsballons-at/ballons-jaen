@@ -64,7 +64,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-jaen-mailpress`,
       options: {
-        pylonUrl: 'https://pylons.cronit.io/mailpress/graphql',
+        pylonUrl: 'https://mwko8k4o8sks048w8ok88kgk.cronit.io/graphql',
       }
     }
     // 'gatsby-plugin-webpack-bundle-analyser-v2'
