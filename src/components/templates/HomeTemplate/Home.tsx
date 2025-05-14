@@ -10,6 +10,7 @@ import Riesges from './Riesges/Riesges'
 import {FeaturedProducts} from './FeaturedProductsSection/FeaturedProductsSection'
 
 import {ShopifyProduct} from '@snek-at/gatsby-theme-shopify'
+import { BalloonConfiguratorSection } from './ConfiguratorSection'
 
 interface IHomeProps {
   featuredProducts: ShopifyProduct[]
@@ -20,6 +21,7 @@ const Home: FC<IHomeProps> = props => {
     <>
       <Hero anchor="hero" />
       <Riesges />
+      <BalloonConfiguratorSection />
       <FeaturedProducts
         featuredProducts={props.featuredProducts}
         productsPagePath={'/products'}
