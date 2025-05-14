@@ -13,7 +13,7 @@ import {
   Container,
   chakra
 } from '@chakra-ui/react'
-import {Field, connectBlock, useSectionBlockContext} from '@atsnek/jaen'
+import {Field, connectBlock, useSectionBlockContext} from 'jaen'
 import {FC} from 'react'
 import {Interface} from 'readline'
 import {CONTAINER_MAX_WIDTH} from '../../../../constant/sizes'

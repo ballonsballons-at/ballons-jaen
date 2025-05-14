@@ -2,7 +2,7 @@ import {Table, Tbody, Td, Th, Thead, Tr} from '@chakra-ui/react'
 import {FC} from 'react'
 
 // Default custom components (replaces HTML tags)
-import {MdxField} from '@atsnek/jaen-fields-mdx'
+import {MdxField} from 'jaen-fields-mdx'
 import Link from './core/Link'
 import Heading from './heading/Heading'
 import List from './list/List'

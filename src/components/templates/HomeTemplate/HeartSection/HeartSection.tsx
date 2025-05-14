@@ -1,5 +1,5 @@
 import {Box, Container, Grid, Heading, Stack, Text} from '@chakra-ui/react'
-import {Field} from '@atsnek/jaen'
+import {Field} from 'jaen'
 import {StaticImage} from 'gatsby-plugin-image'
 import {FC} from 'react'
 

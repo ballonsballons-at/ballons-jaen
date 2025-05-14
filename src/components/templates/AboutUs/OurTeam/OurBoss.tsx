@@ -16,7 +16,7 @@ import {
 
 import {FC} from 'react'
 import {CONTAINER_MAX_WIDTH} from '../../../../constant/sizes'
-import {Field} from '@atsnek/jaen'
+import {Field} from 'jaen'
 import TopShape from '../../../../common/assets/shapes/top_shape.inline.svg'
 import Shape1 from '../../../../common/assets/shapes/shape1.inline.svg'
 import CardLine from '../../../../common/assets/card_line.inline.svg'

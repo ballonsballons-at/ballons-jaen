@@ -11,7 +11,7 @@ import {
 import {FC, Fragment} from 'react'
 import {CONTAINER_MAX_WIDTH} from '../../../constant/sizes'
 import LinkButtonField from '../../fields/LinkButtonField'
-import {Field} from '@atsnek/jaen'
+import {Field} from 'jaen'
 
 interface IAboutBallonsProps {}
 

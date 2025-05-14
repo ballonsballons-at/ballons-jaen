@@ -1,4 +1,4 @@
-import {PageConfig} from '@atsnek/jaen'
+import {PageConfig} from 'jaen'
 import {graphql, PageProps} from 'gatsby'
 
 import {WissenPage} from '../components/templates/WissenPage'
@@ -30,4 +30,4 @@ export const query = graphql`
   }
 `
 
-export {Head} from '@atsnek/jaen'
+export {Head} from 'jaen'

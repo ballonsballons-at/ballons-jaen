@@ -2,13 +2,13 @@ import {
   getFormattedProductPrices,
   withStoreContext
 } from '@snek-at/gatsby-theme-shopify'
-import {sq} from 'gatsby-jaen-mailpress'
+import {sendTemplateMail} from 'gatsby-jaen-mailpress'
 import {doNotConvertToString} from 'snek-query'
 import React, {useCallback, useMemo} from 'react'
 
 import {BasketDrawer} from '../components/organisms/BasketDrawer'
 
-import {checkUserRoles, useAuth} from '@atsnek/jaen'
+import {checkUserRoles, useAuth} from 'jaen'
 import {useToast} from '@chakra-ui/react'
 import {OrderFormValues, OrderModal} from '../components/organisms/OrderModal'
 import {getProductPrices} from '../common/utils'
@@ -227,41 +227,39 @@ export const BasketDrawerProvider = withStoreContext<BasketDrawerProps>(
 
       const order = await createOrFetchCheckout()
 
-      const [_, errors] = await sq.mutate(m =>
-        m.sendTemplateMail({
-          envelope: {
-            replyTo: data.email
+      const res = await sendTemplateMail('741b9cab-4835-4f1d-8ba4-927ebb80111f', {
+        envelope: {
+          replyTo: data.email
+        },
+        values: {
+          cart: cleanedLineItems.map(lineItem => ({
+            name: lineItem.title.toString(),
+            quantity: lineItem.quantity,
+            sku: lineItem.variant?.sku,
+            price: lineItem.variant?.price.amount,
+            imgSrc: lineItem.variant?.image?.src
+          })),
+          order: {
+            id: order.id,
+            totalPrice: order.totalPrice.amount,
+            currency: order.totalPrice.currencyCode,
+            note: data.message
           },
-          id: '741b9cab-4835-4f1d-8ba4-927ebb80111f',
-          values: {
-            cart: cleanedLineItems.map(lineItem => ({
-              name: lineItem.title.toString(),
-              quantity: lineItem.quantity,
-              sku: lineItem.variant?.sku,
-              price: lineItem.variant?.price.amount,
-              imgSrc: lineItem.variant?.image?.src
-            })),
-            order: {
-              id: order.id,
-              totalPrice: order.totalPrice.amount,
-              currency: order.totalPrice.currencyCode,
-              note: data.message
-            },
-            customer: {
-              emailAddress: data.email,
-              firstName: data.firstName,
-              lastName: data.lastName,
-              phone: data.phone
-            },
-            wholesale: isRealWholesale,
-            email: data.email,
-            message: data.message,
-            invokedOnUrl: meta?.url
-          }
-        })
-      )
+          customer: {
+            emailAddress: data.email,
+            firstName: data.firstName,
+            lastName: data.lastName,
+            phone: data.phone
+          },
+          wholesale: isRealWholesale,
+          email: data.email,
+          message: data.message,
+          invokedOnUrl: meta?.url
+        }
 
-      if (errors) {
+      })
+
+      if (!res.ok) {
         // Deutsch
         toast({
           title: 'Fehler',

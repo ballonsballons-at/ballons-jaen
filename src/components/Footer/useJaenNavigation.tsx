@@ -1,4 +1,4 @@
-import {useContentManagement, useWidget} from '@atsnek/jaen'
+import {useContentManagement, useWidget} from 'jaen'
 
 export const extractUrlsFromMarkdown = (
   markdown: string

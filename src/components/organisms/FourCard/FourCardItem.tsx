@@ -1,5 +1,5 @@
 import {GridItem} from '@chakra-ui/react'
-import {connectBlock} from '@atsnek/jaen'
+import {connectBlock} from 'jaen'
 import CardWithImageBackground from '../../CardWithImageBackground'
 
 export const FourCardItem = connectBlock(

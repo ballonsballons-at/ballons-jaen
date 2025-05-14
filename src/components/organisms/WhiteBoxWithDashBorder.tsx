@@ -1,5 +1,5 @@
 import {Box, Heading, Text, useToast, VStack} from '@chakra-ui/react'
-import {Field, useField} from '@atsnek/jaen'
+import {Field, useField} from 'jaen'
 import React, {FC} from 'react'
 import LinkButtonField from '../fields/LinkButtonField'
 

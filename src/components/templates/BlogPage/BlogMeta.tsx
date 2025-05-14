@@ -1,5 +1,5 @@
 import {Box, Text} from '@chakra-ui/react'
-import {Field} from '@atsnek/jaen'
+import {Field} from 'jaen'
 import {today} from '../../../common/utils'
 
 export const BlogMeta: React.FC = () => {

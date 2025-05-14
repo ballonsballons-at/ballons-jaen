@@ -1,4 +1,4 @@
-import type {useJaenPageIndex} from '@atsnek/jaen'
+import type {useJaenPageIndex} from 'jaen'
 
 export interface INewsSlides {
   image: string

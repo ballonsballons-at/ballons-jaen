@@ -8,7 +8,7 @@ import {
   chakra,
   Box
 } from '@chakra-ui/react'
-import {Field} from '@atsnek/jaen'
+import {Field} from 'jaen'
 import {StaticImage} from 'gatsby-plugin-image'
 import {FC, useEffect, useRef} from 'react'
 import LinkButtonField from '../../../fields/LinkButtonField'

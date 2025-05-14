@@ -1,5 +1,5 @@
 import {ShopifyProduct} from '@snek-at/gatsby-theme-shopify'
-import {PageConfig, PageProps} from '@atsnek/jaen'
+import {PageConfig, PageProps} from 'jaen'
 import {graphql} from 'gatsby'
 
 import HomePage from '../components/templates/HomeTemplate/Home'
@@ -53,4 +53,4 @@ export const query = graphql`
   }
 `
 
-export {Head} from '@atsnek/jaen'
+export {Head} from 'jaen'

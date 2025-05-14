@@ -1,4 +1,4 @@
-import {useContentManagement, useWidget} from '@atsnek/jaen'
+import {useContentManagement, useWidget} from 'jaen'
 import {useEffect, useMemo, useState} from 'react'
 import {extractUrlsFromMarkdown} from './BottomNav'
 

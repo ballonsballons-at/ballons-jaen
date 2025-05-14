@@ -8,7 +8,7 @@ import {
   Stack,
   Text
 } from '@chakra-ui/react'
-import {Field, useContentManagement} from '@atsnek/jaen'
+import {Field, useContentManagement} from 'jaen'
 import {Link, navigate} from 'gatsby'
 import {FC} from 'react'
 import {FaChevronRight} from '@react-icons/all-files/fa/FaChevronRight'

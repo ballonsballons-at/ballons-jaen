@@ -1,4 +1,4 @@
-import {Field} from '@atsnek/jaen'
+import {Field} from 'jaen'
 import {Button, Flex, Grid, Heading, Stack} from '@chakra-ui/react'
 import {FaChevronRight} from '@react-icons/all-files/fa/FaChevronRight'
 import {Link} from 'gatsby'

@@ -1,4 +1,4 @@
-import {Field, useField} from '@atsnek/jaen'
+import {Field, useField} from 'jaen'
 import {
   Box,
   Grid,

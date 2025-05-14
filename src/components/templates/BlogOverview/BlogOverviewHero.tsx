@@ -7,7 +7,7 @@ import {
   Stack,
   VStack
 } from '@chakra-ui/react'
-import {Field} from '@atsnek/jaen'
+import {Field} from 'jaen'
 import {Link} from 'gatsby'
 import {FC} from 'react'
 import {CONTAINER_MAX_WIDTH} from '../../../constant/sizes'

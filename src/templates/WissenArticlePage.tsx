@@ -28,4 +28,4 @@ export const query = graphql`
   }
 `
 
-export {Head} from '@atsnek/jaen'
+export {Head} from 'jaen'

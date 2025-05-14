@@ -7,7 +7,7 @@ import {
   Stack,
   Text
 } from '@chakra-ui/react'
-import {connectBlock, Field, PhotoProvider} from '@atsnek/jaen'
+import {connectBlock, Field, PhotoProvider} from 'jaen'
 import Slider from 'react-slick'
 import {CONTAINER_MAX_WIDTH} from '../../../constant/sizes'
 import {blogSliderSettings} from '../../../constant/slider'

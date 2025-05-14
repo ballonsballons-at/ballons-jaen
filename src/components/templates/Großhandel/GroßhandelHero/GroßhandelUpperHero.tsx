@@ -8,7 +8,7 @@ import {
   Flex,
   Image
 } from '@chakra-ui/react'
-import {Field} from '@atsnek/jaen'
+import {Field} from 'jaen'
 import {FC} from 'react'
 import {CONTAINER_MAX_WIDTH} from '../../../../constant/sizes'
 import {StaticImage} from 'gatsby-plugin-image'

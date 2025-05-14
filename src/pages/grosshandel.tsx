@@ -1,4 +1,4 @@
-import {PageConfig} from '@atsnek/jaen'
+import {PageConfig} from 'jaen'
 import {graphql, PageProps} from 'gatsby'
 
 import GroßhandelPage from '../components/templates/Großhandel/Großhandel'
@@ -33,4 +33,4 @@ export const query = graphql`
   }
 `
 
-export {Head} from '@atsnek/jaen'
+export {Head} from 'jaen'

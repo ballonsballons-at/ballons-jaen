@@ -21,7 +21,7 @@ import {ProductsTemplateProps} from '../../components/templates/ProductsTemplate
 import {splitAllTags} from '../../components/templates/ProductsTemplate/splitAllTags'
 import Fonts from '../../styles/fonts'
 import {ProductsContext} from '../../contexts/products'
-import {LayoutProps} from '@atsnek/jaen'
+import {LayoutProps} from 'jaen'
 
 export const Layout: React.FC<LayoutProps> = ({children, pageProps}) => {
   const isStore = pageProps.location.pathname.startsWith('/products')

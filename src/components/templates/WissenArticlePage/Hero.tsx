@@ -8,7 +8,7 @@ import {
   Stack,
   Text
 } from '@chakra-ui/react'
-import {Field} from '@atsnek/jaen'
+import {Field} from 'jaen'
 import {FC} from 'react'
 import {WissenArticleMetaBar} from '../../organisms/WissenArticleMetaBar'
 

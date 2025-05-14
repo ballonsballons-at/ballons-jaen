@@ -31,7 +31,7 @@ import React from 'react'
 import {getSrcFromImageData} from '../common/get-src-from-image-data'
 import {metafieldIdentifiers} from '../common/getProductMetafields'
 import {getProductPrices} from '../common/utils'
-import {checkUserRoles, useAuth} from '@atsnek/jaen'
+import {checkUserRoles, useAuth} from 'jaen'
 
 export interface SearchContextProps {
   isOpen: boolean

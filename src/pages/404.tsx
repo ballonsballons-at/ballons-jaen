@@ -1,4 +1,4 @@
-import {PageConfig} from '@atsnek/jaen'
+import {PageConfig} from 'jaen'
 import {chakra, Box, Heading, Text} from '@chakra-ui/react'
 import {graphql, Link, PageProps} from 'gatsby'
 
@@ -56,4 +56,4 @@ export const query = graphql`
   }
 `
 
-export {Head} from '@atsnek/jaen'
+export {Head} from 'jaen'

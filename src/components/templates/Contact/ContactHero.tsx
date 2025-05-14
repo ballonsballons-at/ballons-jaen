@@ -9,7 +9,7 @@ import {
   Text,
   VStack
 } from '@chakra-ui/react'
-import {Field} from '@atsnek/jaen'
+import {Field} from 'jaen'
 import {FC, ReactNode} from 'react'
 import {FaPhoneAlt} from '@react-icons/all-files/fa/FaPhoneAlt'
 import {FaEnvelope} from '@react-icons/all-files/fa/FaEnvelope'

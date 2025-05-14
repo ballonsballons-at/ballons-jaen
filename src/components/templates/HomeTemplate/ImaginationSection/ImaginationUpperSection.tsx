@@ -1,5 +1,5 @@
 import {Box, Heading, Image, Text, VStack, chakra} from '@chakra-ui/react'
-import {Field} from '@atsnek/jaen'
+import {Field} from 'jaen'
 import {FC, useRef} from 'react'
 import Underline from '../../../../common/assets/underline.inline.svg'
 import {useScrollShow} from '../../../hooks/scroll'

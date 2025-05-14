@@ -1,4 +1,4 @@
-import {connectBlock, Field, PhotoProvider} from '@atsnek/jaen'
+import {connectBlock, Field, PhotoProvider} from 'jaen'
 import {Box, chakra, Grid, VStack} from '@chakra-ui/react'
 import Slider from 'react-slick'
 

@@ -16,32 +16,35 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@atsnek/jaen": "^1.0.0-rc.90",
-    "@atsnek/jaen-fields-mdx": "^1.0.0-rc.4",
-    "@chakra-ui/icons": "^2.1.1",
-    "@chakra-ui/react": "^2.8.1",
+    "@chakra-ui/icons": "2.1.1",
+    "@chakra-ui/react": "2.8.1",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@react-icons/all-files": "https://github.com/react-icons/react-icons/releases/download/v4.11.0/react-icons-all-files-4.11.0.tgz",
     "@snek-at/gatsby-theme-shopify": "^1.14.5",
     "@snek-at/uikit": "^1.1.0",
     "chakra-react-select": "^4.4.0",
+    "cxs": "^6.2.0",
     "framer-motion": "^10.0.1",
     "gatsby": "^5",
-    "gatsby-jaen-mailpress": "^0.0.6",
+    "gatsby-jaen-mailpress": "^2.1.1",
     "gatsby-plugin-image": "^3",
-    "gatsby-plugin-jaen": "^1.0.0-rc.105",
+    "gatsby-plugin-jaen": "^1.7.0",
     "gatsby-plugin-react-svg": "^3.3.0",
     "gatsby-plugin-sharp": "^5",
     "gatsby-plugin-sitemap": "^6.9.0",
     "gatsby-transformer-sharp": "^5",
+    "gqty": "^3.4.2",
+    "jaen": "^1.2.2",
+    "jaen-fields-mdx": "^1.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.4",
     "react-photo-view": "^1.2.3",
     "react-slick": "^0.29.0",
     "react-text-loop": "^2.3.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "three": "0.166.0"
   },
   "devDependencies": {
     "@types/node": "^18.14.0",
@@ -55,6 +58,7 @@
     "gatsby-plugin-image": "^3",
     "graphql": "^16",
     "@gatsbyjs/reach-router": "^2.0.0",
-    "gatsby-source-shopify": "^9.0.0"
+    "gatsby-source-shopify": "^9.0.0",
+    "three": "^0.166.0"
   }
 }

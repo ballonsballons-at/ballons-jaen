@@ -1,8 +1,8 @@
 import {useToast} from '@chakra-ui/react'
-import {sq} from 'gatsby-jaen-mailpress'
+import {sendTemplateMail} from 'gatsby-jaen-mailpress'
 import React, {useMemo} from 'react'
 
-import {useAuth} from '@atsnek/jaen'
+import {useAuth} from 'jaen'
 import {navigate} from 'gatsby'
 import {useQueryRouter} from '../components/hooks/useQueryRouter'
 import {
@@ -81,25 +81,25 @@ export const ContactModalProvider: React.FC<ContactModalDrawerProps> = ({
 
     console.log(data, meta)
 
-    const [_, errors] = await sq.mutate(m =>
-      m.sendTemplateMail({
-        envelope: {
-          replyTo: data.email
-        },
+    const res = await sendTemplateMail('48f87e63-2202-4640-9bfc-55bf6d478f7c', {
+     envelope: {
+        replyTo: data.email
+     },
+      values: {
+        firstName: data.firstName,
+        lastName: data.lastName,
+        email: data.email,
+        phone: data.phone,
+        message: data.message,
+        invokedOnUrl: meta?.url
+      }
+    
 
-        id: '48f87e63-2202-4640-9bfc-55bf6d478f7c',
-        values: {
-          firstName: data.firstName,
-          lastName: data.lastName,
-          email: data.email,
-          phone: data.phone,
-          message: data.message,
-          invokedOnUrl: meta?.url
-        }
-      })
-    )
+    })
 
-    if (errors) {
+  
+
+    if (!res.ok) {
       // Deutsch
       toast({
         title: 'Fehler',

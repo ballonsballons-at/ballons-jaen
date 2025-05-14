@@ -1,4 +1,4 @@
-import {useJaenPageIndex} from '@atsnek/jaen'
+import {useJaenPageIndex} from 'jaen'
 
 export const useContentPages = () => {
   const index = useJaenPageIndex()

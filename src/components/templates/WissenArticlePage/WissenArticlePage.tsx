@@ -1,5 +1,5 @@
 import {Box, Container, Divider, Heading, Icon, Stack} from '@chakra-ui/react'
-import {Field} from '@atsnek/jaen'
+import {Field} from 'jaen'
 import {CONTAINER_MAX_WIDTH} from '../../../constant/sizes'
 import {
   ImageBlock,

@@ -1,4 +1,4 @@
-import {PageConfig, usePageContext} from '@atsnek/jaen'
+import {PageConfig, usePageContext} from 'jaen'
 import {graphql, PageProps} from 'gatsby'
 
 import KategorieB from '../components/templates/KategorieB/KategorieB'
@@ -28,4 +28,4 @@ export const query = graphql`
   }
 `
 
-export {Head} from '@atsnek/jaen'
+export {Head} from 'jaen'

@@ -33,7 +33,7 @@ import {
   useSectionField,
   UseSectionField,
   PhotoProvider
-} from '@atsnek/jaen'
+} from 'jaen'
 import React, {
   forwardRef,
   useCallback,

@@ -1,5 +1,5 @@
 import {Box, Image, Container, Heading, HStack, chakra} from '@chakra-ui/react'
-import {Field} from '@atsnek/jaen'
+import {Field} from 'jaen'
 import {FC} from 'react'
 import {CONTAINER_MAX_WIDTH} from '../../../../constant/sizes'
 import {MobileHero, ParallaxHero} from '../../../molecules/ParallaxHero'

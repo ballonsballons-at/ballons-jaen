@@ -1,4 +1,4 @@
-import {PageConfig} from '@atsnek/jaen'
+import {PageConfig} from 'jaen'
 import {graphql, PageProps} from 'gatsby'
 
 import ContactAboutUs from '../components/templates/ContactAboutUs/ContactAboutUs'
@@ -22,4 +22,4 @@ export const query = graphql`
   }
 `
 
-export {Head} from '@atsnek/jaen'
+export {Head} from 'jaen'

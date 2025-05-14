@@ -8,7 +8,7 @@ import {useContactModal} from '../../services/contact'
 import {useSearch} from '../../services/search'
 import {LayoutMode} from '../../types/commonTypes'
 import TopNav from './TopNav'
-import {useAuth} from '@atsnek/jaen'
+import {useAuth} from 'jaen'
 
 interface INavigationProps {
   mode: LayoutMode

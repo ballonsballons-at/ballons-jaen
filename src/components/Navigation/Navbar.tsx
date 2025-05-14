@@ -22,7 +22,7 @@ import {SearchbarButton} from '../molecules/Searchbar'
 import BottomNav from './BottomNav'
 import {NavAuthButton} from './NavAuthButton'
 
-import {useAuth} from '@atsnek/jaen'
+import {useAuth} from 'jaen'
 import {Logo} from '../../common/assets/Logo'
 import {MobileHambuger} from './MobileHamburger'
 

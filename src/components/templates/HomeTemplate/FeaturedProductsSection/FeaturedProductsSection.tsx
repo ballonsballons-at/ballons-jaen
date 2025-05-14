@@ -7,7 +7,7 @@ import {ProductGrid} from '../../../molecules/ProductGrid'
 //import { StickyStrokeLogo } from '../../../molecules/StickyStrokeLogo'
 import LinkButtonField from '../../../fields/LinkButtonField'
 import * as style from './style'
-import {useAuth} from '@atsnek/jaen'
+import {useAuth} from 'jaen'
 import {ProductSlider} from '../../../molecules/ProductSlider'
 
 export interface FeaturedProductsSectionProps {

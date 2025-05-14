@@ -20,7 +20,7 @@ import {
 } from '@chakra-ui/react'
 import {useForm} from 'react-hook-form'
 
-import {Field, useField} from '@atsnek/jaen'
+import {Field, useField} from 'jaen'
 import {Link, navigate} from 'gatsby'
 import React from 'react'
 import {validateUrl} from '../../common/utils'

@@ -2,11 +2,11 @@ import {
   ProductsPageContext,
   ProductsPageData
 } from '@snek-at/gatsby-theme-shopify'
-import {PageConfig, checkUserRoles} from '@atsnek/jaen'
+import {PageConfig, checkUserRoles} from 'jaen'
 import {PageProps} from 'gatsby'
 
 import {ProductsTemplate} from '../components/templates/ProductsTemplate'
-import {useAuth} from '@atsnek/jaen'
+import {useAuth} from 'jaen'
 import {useProducts} from '../contexts/products'
 
 export type ProductsPageTemplateProps = PageProps<
@@ -52,4 +52,4 @@ export const pageConfig: PageConfig = {
   withoutJaenFrameStickyHeader: true
 }
 
-export {Head} from '@atsnek/jaen'
+export {Head} from 'jaen'

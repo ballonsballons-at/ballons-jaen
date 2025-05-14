@@ -1,4 +1,4 @@
-import {Field, useContentManagement} from '@atsnek/jaen'
+import {Field, useContentManagement} from 'jaen'
 import {Box, Button, Flex, Grid, Heading, Stack} from '@chakra-ui/react'
 import {FaChevronRight} from '@react-icons/all-files/fa/FaChevronRight'
 import {Link} from 'gatsby'

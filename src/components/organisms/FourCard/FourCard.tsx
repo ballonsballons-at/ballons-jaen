@@ -1,5 +1,5 @@
 import {Container, SimpleGrid} from '@chakra-ui/react'
-import {Field, useContentManagement} from '@atsnek/jaen'
+import {Field, useContentManagement} from 'jaen'
 import {FC} from 'react'
 import {CONTAINER_MAX_WIDTH} from '../../../constant/sizes'
 import {FourCardItem} from './FourCardItem'

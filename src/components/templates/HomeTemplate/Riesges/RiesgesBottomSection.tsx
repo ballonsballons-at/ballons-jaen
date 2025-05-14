@@ -9,7 +9,7 @@ import {
   Stack,
   Text
 } from '@chakra-ui/react'
-import {Field} from '@atsnek/jaen'
+import {Field} from 'jaen'
 import {FC, ReactNode} from 'react'
 import LinkButtonField from '../../../fields/LinkButtonField'
 import PinkBlob from '../../../../common/assets/shapes/pink_blob.inline.svg'

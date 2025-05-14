@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react'
 import {useMemo} from 'react'
 
-import {Field} from '@atsnek/jaen'
+import {Field} from 'jaen'
 import TextLoop from 'react-text-loop'
 import {Ballons} from '../../../common/assets/Ballons'
 import SkylineL1 from '../../../common/assets/skyline1.inline.svg'

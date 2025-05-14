@@ -4,14 +4,14 @@ import {
   ProductsPageContext,
   SearchProvider
 } from '@snek-at/gatsby-theme-shopify'
-import {checkUserRoles, Head as JaenHead, PageConfig, PageProps} from '@atsnek/jaen'
+import {checkUserRoles, Head as JaenHead, PageConfig, PageProps} from 'jaen'
 import {graphql, navigate} from 'gatsby'
 import React from 'react'
 
 import {buildAllTags} from '../components/templates/ProductsTemplate/buildAllTags'
 import {ProductTemplate} from '../components/templates/ProductTemplate'
 
-import {useAuth} from '@atsnek/jaen'
+import {useAuth} from 'jaen'
 
 export type ProductPageTemplateProps = PageProps<
   ProductPageData & {
